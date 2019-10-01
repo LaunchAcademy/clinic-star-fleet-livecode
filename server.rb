@@ -12,9 +12,38 @@ get '/' do
 end
 
 get '/starships' do
-  # Use a custom Starship class that inherits from ActiveRecord to retrieve your database objects
-  # You should be using ActiveRecord CRUD methods to aid you.
-  # E.g. Planet.where(planet_type: "gas giant"), etc.
+  @ships = Ship.all
 
   erb :'starships/index'
+end
+
+get '/starships/new' do
+  erb :'starships/new'
+end
+
+post '/starships/new' do
+  starship = Ship.new
+  starship.name = params[:name]
+  starship.ship_class = params[:ship_class]
+  starship.location = params[:location]
+
+  if !starship.name.empty? && !starship.ship_class.empty? && !starship.location.empty?
+    starship.save
+    flash[:notice] = "Starship Created"
+
+    redirect "/starships/#{starship.id}"
+  else
+    flash[:notice] = "Shut Up Wesley - you done effed up"
+    @name = params[:name]
+    @ship_class = params[:ship_class]
+    @location = params[:location]
+    erb :"/starships/new"
+  end
+
+end
+
+get '/starships/:id' do
+  @ship = Ship.find(params[:id])
+
+  erb :'starships/show'
 end

@@ -1,0 +1,21 @@
+<h1>The Shipyard</h1>
+<div>
+  <%= @errors %>
+</div>
+
+<form action="/starships/new" method="post" >
+
+  <label for="name">Name:
+    <input type="text" name="name" value="<%= @name %>">
+  </label>
+
+  <label for="ship_class">Ship Class:
+    <input type="text" name="ship_class" value="<%= @ship_class %>">
+  </label>
+
+  <label for="location">Current Location:
+    <input type="text" name="location" value="<%= @location %>">
+  </label>
+
+  <input type="submit" value="Make it So #1">
+</form>
