@@ -6,6 +6,7 @@ body {
 a,
 a:visited {
   text-decoration: none;
+  color: #001166;
 }
 
 .container {
