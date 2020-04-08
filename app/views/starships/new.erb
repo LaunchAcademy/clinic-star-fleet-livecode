@@ -2,7 +2,7 @@
 
 <form action="/starships" method="post">
   <label for="name"> Name:
-    <input type="text" name="name" id="name">
+    <input type="text" name="name" id="name" value="<%= @name %>">
   </label>
 
   <label for="ship_class"> Ship Class:
@@ -14,5 +14,4 @@
   </label>
 
   <input type="submit" value="Submit Starship">
-
 </form>

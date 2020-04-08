@@ -4,9 +4,20 @@
 <p> <%= @starship.ship_class %> </p>
 <p> <%= @starship.location %> </p>
 
+<h3>New CrewMember Form</h3>
 
-<h1>New CrewMember Form</h1>
+<form action="/starships/<%= @starship.id %>/crew-members" method="post">
+  <label for="first_name"> First name:
+    <input type="text" name="first_name" id="first_name" >
+  </label>
 
-<form action="/starships/<%= @starship.id %>/crew_members" method="post">
+  <label for="last_name"> Last Name:
+    <input type="text" name="last_name" id="last_name">
+  </label>
 
+  <label for="specialty_division"> specialty_division
+    <input type="text" name="specialty_division" id="specialty_division">
+  </label>
+
+  <input type="submit" value="Submit Starship">
 </form>

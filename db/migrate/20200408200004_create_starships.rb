@@ -4,6 +4,8 @@ class CreateStarships < ActiveRecord::Migration[5.2]
       t.string :name, null: false
       t.string :ship_class, null: false
       t.string :location, null: false
+
+      t.timestamps null: false
     end
   end
 end
