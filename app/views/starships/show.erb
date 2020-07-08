@@ -7,4 +7,28 @@
 <p> <%= @starship.location %> </p>
 
 <h5>Sign up here to join the <%= @starship.name%>!</h5>
+<% binding.pry %>
+<form action="/starships/<%= @starship.id %>/crew-members" method="post">
+  <label for="first_name">first_name:</label>
+  <input
+    type="text"
+    name="first_name"
+    id="first_name"
+  />
 
+  <label for="last_name">Last Name:</label>
+  <input
+    type="text"
+    name="last_name"
+    id="last_name"
+  />
+
+  <label for="specialty_division">specialty division:</label>
+  <input
+    type="text"
+    name="specialty_division"
+    id="specialty_division"
+  />
+
+  <input type="submit" value="Submit">
+</form>
