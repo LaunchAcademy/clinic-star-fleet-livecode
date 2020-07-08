@@ -18,3 +18,26 @@ get '/starships' do
 
   erb :'starships/index'
 end
+
+get '/crew-members' do
+
+  erb :'crew_members/index'
+end
+
+get '/starships/new' do
+
+  erb :'starships/new'
+end
+
+get '/starships/:id' do
+  
+  erb :'starships/show'
+end
+
+post '/starships' do
+  
+end
+
+post '/starships/:starship_id/crew-members' do
+  
+end
