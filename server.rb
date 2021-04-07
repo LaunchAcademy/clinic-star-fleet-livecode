@@ -12,9 +12,29 @@ get '/' do
 end
 
 get '/starships' do
-  # Use a custom Starship class that inherits from ActiveRecord to retrieve your database objects
-  # You should be using ActiveRecord CRUD methods to aid you.
-  # E.g. Planet.where(planet_type: "gas giant"), etc.
-
+  
   erb :'starships/index'
+end
+
+get '/crew-members' do
+
+  erb :'crew_members/index'
+end
+
+get '/starships/new' do
+  erb :'starships/new'
+end
+
+get '/starships/:id' do
+
+  erb :'starships/show'
+end
+
+post '/starships' do
+
+
+end
+
+post '/starships/:starship_id/crew-members' do
+
 end
