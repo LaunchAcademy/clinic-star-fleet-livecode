@@ -1,17 +1,19 @@
 <h1> New Starship Creation  </h1>
 
-<form method="POST" action="/star-ships">
-    <label for="name">
-        <input type="text" name="name" id="id">
-    </label>
+<div class="form">
+    <form method="POST" action="/star-ships">
+        <label for="name"> Name: 
+            <input type="text" name="name" id="id">
+        </label>
 
-    <label for="name">
-        <input type="text" name="ship_class" id="id">
-    </label>
-    å
-    <label for="name">
-        <input type="text" name="location" id="id">
-    </label>
-    
-    <input type="submit" value="Create New Ship">
-</form>
+        <label for="name"> Ship Class:
+            <input type="text" name="ship_class" id="id">
+        </label>
+
+        <label for="name"> Location:
+            <input type="text" name="location" id="id">
+        </label>
+        
+        <input type="submit" value="Create New Ship">
+    </form>
+</div>
