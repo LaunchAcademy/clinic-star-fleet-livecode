@@ -3,5 +3,6 @@
 #
 # Example:
 #
-# Ship.create(name: 'USS Enterprise', ship_class: 'Galaxy', location: "Romulan Star Empire")
-# Ship.create(name: 'Serenity', ship_class: 'Firefly', location: "Miranda")
+StarShip.create(name: 'USS Enterprise', ship_class: 'Galaxy', location: "Romulan Star Empire")
+StarShip.create(name: 'Serenity', ship_class: 'Firefly', location: "Miranda")
+CrewMember.create(first_name: "Mal", last_name: "Reynolds", specialty_division: "Misbehavior")
