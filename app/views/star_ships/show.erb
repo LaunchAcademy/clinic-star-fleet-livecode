@@ -1,20 +1,16 @@
-<h1> <%= @star_ship.name %> Details </h1>
-<p> Ship Class: <%= @star_ship.ship_class %> </p>
-<p> Ship Current Location: <%= @star_ship.location %> </p>
+<h1>Ship Show Page</h1>
+
+
 
 <h3>Crew Members:</h3>
 
-<% @star_ship.crew_members.each do |member| %>
-<li>
-    <%= member.first_name%> <%= member.last_name%>
-</li>
-<% end %>
+
 
 
 <h3>Add a Crew Member</h3>
 
 <div class="form">
-    <form method="post" action=<%= "/star-ships/#{@star_ship.id}/crew-members" %>>
+    <form>
         <label for="first_name"> First Name: 
             <input type="text" id="first_name" name="first_name">
         </label>
