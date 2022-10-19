@@ -1,27 +1,9 @@
-<h1>Ship Show Page</h1>
-
-<h2> <%= @star_ship.name %></h2>
-<h3> Location: <%= @star_ship.location %></h3>
-<h3> Class: <%= @star_ship.ship_class %></h3>
 
 
+<h3>Add a Crew Member</h3>
 
-<h3>Crew Members:</h3>
-
-<ul>
-    <% @star_ship.crew_members.each do |member| %>
-        <li>
-            <%= member.first_name %> <%= member.last_name %>
-        </li>
-    <% end %>
-</ul>
-
-
-<h1>New Crew Member Form</h1>
-
-
-    <form method="POST" action="<%= "/star-ships/#{@star_ship.id}/crew-members" %>" >
-
+<div class="form">
+    <form>
         <label for="first_name"> First Name: 
             <input type="text" id="first_name" name="first_name">
         </label>
@@ -36,6 +18,4 @@
 
         <input type="submit" value="Add Crew Member to Ship">
     </form>
-
-
-
+</div>

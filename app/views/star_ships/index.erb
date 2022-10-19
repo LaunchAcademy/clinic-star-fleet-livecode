@@ -2,6 +2,8 @@
 
 <% @star_ships.each do |ship| %>
 <li>
-    <%= ship.name%>
+    <a href=<%= "/star-ships/#{ship.id}" %>>
+        <%= ship.name%>
+    </a>
 </li>
 <% end %>
